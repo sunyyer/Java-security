@@ -25,3 +25,8 @@ public class Test{
     try{
       //创建一个FileOutputStream}}}
 ```
+### 0x04 反序列化漏洞
+反序列化漏洞是指在反序列化过程中自动执行类中readObject方法导致的漏洞，类似于PHP反序列化时会自动执行__wakeup方法一样。如果readObject中执行了某种危险的操作，就可能到做反序列化漏洞。
+
+实际情况不会有这么简单的情况，真实的环境下一定是一种利用链的调用关系。
+![](../Asstes/java1.jpg)
