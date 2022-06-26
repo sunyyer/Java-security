@@ -29,4 +29,4 @@ public class Test{
 反序列化漏洞是指在反序列化过程中自动执行类中readObject方法导致的漏洞，类似于PHP反序列化时会自动执行__wakeup方法一样。如果readObject中执行了某种危险的操作，就可能到做反序列化漏洞。
 
 实际情况不会有这么简单的情况，真实的环境下一定是一种利用链的调用关系。
-![](../../../Asstes/picture/java1.jpg)
+![](https://github.com/sunyyer/Java-security/blob/23d75db16555fb7960573d2291c736406720f40b/Asstes/picture/java1.jpg)
