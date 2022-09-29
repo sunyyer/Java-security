@@ -136,7 +136,7 @@ System.out.print(b);
 
 ## 运算符
 
-赋值运算符，算数运算符略~
+赋值运算符，算数运算符略~（整数除以整数，得到的依然是一个整数）
 
 自增,自减同理~
 
@@ -187,5 +187,107 @@ System.out.println(b+++a++);//12
 int a = 7, b = 15;
 String str = a > b ? "可以" : "不可以"
 System.out.Println("今晚有时间吗？" + str);
+```
+
+## 流程控制
+
+### 选择结构
+
+选择结构包含 `if,switch`
+
+#### if
+
+```java
+public class main {
+    public static void main(String[] args) {
+        int  a = 7;
+        int  b = 5;
+        if (a<b){
+            System.out.println(a+b);
+        }else if (a==b) {
+            System.out.println(b);
+        }else {
+            System.out.println(a);
+        }
+        //System.out.println(a);
+    }
+}
+```
+
+其中 `if,else if ,else` 都不是必须的，且可以嵌套。
+
+#### switch
+
+switch采用二分思想进行查找。
+
+### 循环结构
+
+#### for
+
+```java
+public class main {
+    public static void main(String[] args) {
+        int  a = 7;
+        int  b = 5;
+        for (int i = 1 ;i < 40 ; i++){
+            System.out.println("xixi");
+        }
+    }
+}
+```
+
+- 初始条件：循环开始的条件，一般用于定义控制循环的变量。
+
+- 循环条件：每轮循环开始之前，进行一次判断，如果满足则继续，不满足则结束，要求boolean变量或是boolean表达式。
+
+- 更新：每轮循环结束后都会执行的内容，一般写增量表达式。
+
+  初始条件，循环条件，更新不是缺一不可，甚至都可以缺。
+
+#### while
+
+while循环和for类似，但是它更加的简单，只需要添加维持循环的判断条件即可！
+
+```java
+while(循环条件){
+//循环执行的内容
+}
+```
+
+和for一样，每次循环开始，当循环条件不满足时，自动退出！那么有时候我们希望执行了我们的代码再去判断怎么办呢，我们可以使用do-while语句：
+
+```java
+do{
+//
+}while (false)
+```
+
+一定会执行do里面的内容，再做判断
+
+####  break和continue
+
+它两只能控制自己块里面的循环。
+
+```java
+public class main {
+    public static void main(String[] args) {
+        int  a = 7;
+        int  b = 5;
+        while (a < 10){
+            if (a ==8)
+            break;//执行到8结束
+            System.out.println("xixi");
+            a++;
+        }
+    }
+}
+
+		int  a = 7;
+        while (a < 10){
+           	a++;
+            if (a ==8)
+           
+            continue;//执行到8略过。打印9和10.
+            System.out.println("xixi");
 ```
 
